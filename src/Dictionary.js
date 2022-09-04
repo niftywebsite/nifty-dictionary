@@ -1,5 +1,12 @@
+import Search from "./Search";
+
+
 function Dictionary() {
-  return null;
+  return (
+    <>
+      <Search />
+    </>
+  );
 }
 
 export default Dictionary;
