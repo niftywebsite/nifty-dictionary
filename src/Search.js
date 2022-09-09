@@ -1,11 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
 
-function Search() {
+ export default function Search ({ onSubmit } ) {
   const [word, setWord] = useState("");
 
   function handleRespond(respond) {
-    console.log(respond.data[0]);
+    onSubmit(respond.data[0].meanings[0].definitions[0].definition);
   }
 
   function handleChange(event) {
@@ -14,7 +14,6 @@ function Search() {
 
   function handleSubmit(event) {
     event.preventDefault();
-
     const APIUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
     axios.get(APIUrl).then(handleRespond);
   }
@@ -32,4 +31,3 @@ function Search() {
   );
 }
 
-export default Search;
