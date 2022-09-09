@@ -1,7 +1,12 @@
 import { useState } from "react";
+import axios from "axios";
 
 function Search() {
   const [word, setWord] = useState("");
+
+  function handleRespond(respond) {
+    console.log(respond.data[0]);
+  }
 
   function handleChange(event) {
     setWord(event.target.value);
@@ -9,7 +14,9 @@ function Search() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(word);
+
+    const APIUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+    axios.get(APIUrl).then(handleRespond);
   }
 
   return (
