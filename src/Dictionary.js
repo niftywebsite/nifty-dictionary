@@ -11,10 +11,10 @@ const handleWordSubmit = (word) => {
 }
 
   return (
-    <>
+    <div className="m-4">
       <Search onSubmit={handleWordSubmit} />
       <Results data={word} />
-    </>
+    </div>
   );
 }
 

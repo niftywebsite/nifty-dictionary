@@ -19,14 +19,15 @@ import axios from "axios";
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="Search" onSubmit={handleSubmit}>
       <input
+      className="p-1"
         type="search"
         onChange={handleChange}
         autoFocus={true}
         placeholder="enter word"
       />
-      <input type="submit" value="Search" className="btn btn-primary" />
+      <input type="submit" value="Search" className="btn btn-primary btn-lg ms-4 px-4 " />
     </form>
   );
 }
