@@ -2,10 +2,10 @@ import { useState } from "react";
 import axios from "axios";
 
  export default function Search ({ onSubmit } ) {
-  const [word, setWord] = useState("");
+  const [word, setWord] = useState(null);
 
   function handleRespond(respond) {
-    onSubmit(respond.data[0].meanings[0].definitions[0].definition);
+    onSubmit(respond.data[0]);
   }
 
   function handleChange(event) {

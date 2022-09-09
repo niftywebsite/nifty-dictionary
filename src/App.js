@@ -4,9 +4,9 @@ import Footer from "./Footer";
 
 function App() {
   return (
-    <div className="App text-center m-3 p-3 border rounded">
+    <div className="App m-3 p-3">
       <header>
-        <h1>Nifty Dictionary</h1>
+        <h1 className="text-center m-3">Nifty Dictionary</h1>
       </header>
       <Dictionary />
       <Footer />
