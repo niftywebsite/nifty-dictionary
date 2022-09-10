@@ -1,6 +1,5 @@
 import React from "react";
 import Example from "./Example";
-import Synonyms from "./Synonyms";
 
 export default function Definition(props) {
   return (
