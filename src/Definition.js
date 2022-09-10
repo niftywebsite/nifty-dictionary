@@ -1,15 +1,12 @@
 import React from "react";
 import Example from "./Example";
-import Synonym from "./Synonym";
+import Synonyms from "./Synonyms";
 
 export default function Definition(props) {
   return (
-    <li className="my-3" key={props.index}>
-      <h5>{props.data.definition}</h5>
+    <li className="my-3">
+      {props.data.definition}
       <Example data={props.data.example} />
-      {props.data.synonyms.map((synonym, index) => {
-        return <Synonym data={synonym} key={index} />;
-      })}
     </li>
   );
 }
