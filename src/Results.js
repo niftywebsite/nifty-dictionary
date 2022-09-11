@@ -5,13 +5,13 @@ import Phonetic from "./Phonetic";
 export default function Results(props) {
   if (props.data) {
     return (
-      <div className="Results m-3">
+      <div className="Results my-3">
         <h1>{props.data.word}</h1>
-        <ol>
+        <div>
           {props.data.phonetics.map((phonetic, index) => {
             return <Phonetic data={phonetic} key={index} />;
           })}
-        </ol>
+        </div>
         <ol>
           {props.data.meanings.map((meaning, index) => {
             return <Meaning data={meaning} key={index} />;

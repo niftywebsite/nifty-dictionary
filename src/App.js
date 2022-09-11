@@ -1,13 +1,12 @@
 import "./App.css";
 import Dictionary from "./Dictionary";
 import Footer from "./Footer";
+import Header from "./Header";
 
 function App() {
   return (
-    <div className="App m-3 p-3">
-      <header>
-        <h1 className="text-center m-3">Nifty Dictionary</h1>
-      </header>
+    <div className="App m-4">
+      <Header />
       <Dictionary />
       <Footer />
     </div>

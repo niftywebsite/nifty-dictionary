@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="Footer border-top m-4 p-4">
+    <footer className="Footer border-top my-5 py-5 text-center">
       {" "}
       <a
         href="https://github.com/niftywebsite/nifty-dictionary"
