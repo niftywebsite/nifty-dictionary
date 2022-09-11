@@ -1,6 +1,7 @@
 import React from "react";
 import Meaning from "./Meaning";
 import Phonetic from "./Phonetic";
+import Images from "./Images";
 
 export default function Results(props) {
   if (props.data) {
@@ -17,6 +18,7 @@ export default function Results(props) {
             return <Meaning data={meaning} key={index} />;
           })}
         </ol>
+        <Images word={props.data.word} />
       </div>
     );
   } else {

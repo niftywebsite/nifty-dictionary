@@ -6,13 +6,13 @@ export default function Search({ onSubmit }) {
   const [loaded, setLoaded] = useState(false);
 
   function search() {
-    const APIUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-    axios.get(APIUrl).then(handleRespond);
+    const dictionaryAPIUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+    axios.get(dictionaryAPIUrl).then(handleRespond);
   }
-  function load(){
+
+  function load() {
     setLoaded(true);
     search();
-
   }
 
   function handleRespond(respond) {
