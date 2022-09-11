@@ -15,7 +15,7 @@ export default function Images(props) {
 
   function load() {
     setLoaded(true);
-    let pixelesApiUrl = `https://api.pexels.com/v1/search?query=${props.word}&per_page=8`;
+    let pixelesApiUrl = `https://api.pexels.com/v1/search?query=${props.word}&per_page=9`;
     let pixelesKey = "563492ad6f91700001000001b7866cf2761b4b21a48a294c059db68b";
     let header = { Authorization: `Bearer ${pixelesKey}` };
     axios.get(pixelesApiUrl, { headers: header }).then(handleResponse);
@@ -23,10 +23,10 @@ export default function Images(props) {
 
   if (loaded) {
     return (
-      <div className="Images text-center py-4 d-row">
+      <div className="Images text-center py-4 row">
         {photos.map((photo, index) => {
           return (
-            <div className="d-col-4">
+            <div className="col-4">
               <a
                 href={photo.src.original}
                 target="_blank"
